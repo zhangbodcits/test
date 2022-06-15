@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'App',
+    "web.apps.WebConfig"
 ]
 
 MIDDLEWARE = [
@@ -115,6 +116,16 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# 腾讯云短信应用的app_id
+TENCENT_SMS_APP_ID = 66666666666
+# 腾讯云短信应用的app_key
+TENCENT_SMS_APP_KEY = "6666666666666666"
+# 腾讯云短信应用的签名内容
+TENCENT_SMS_SIGN = "博古冠今"
+TENCENT_SMS_TEMPLATE = {
+    "login": 1440128,
+    "register": 1440131
+}
 try:
     from .local_settings import *
 except ImportError:
