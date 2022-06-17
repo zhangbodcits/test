@@ -45,7 +45,7 @@ class RegisterModelForm(forms.ModelForm):
 
 def register(request):
     form = RegisterModelForm()
-    return render(request, "register.html", {"form": form})
+    return render(request, "App/register.html", {"form": form})
 
 from django.shortcuts import HttpResponse
 from django_redis import get_redis_connection
